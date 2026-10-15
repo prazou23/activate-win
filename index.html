@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activate Windows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <a class="instagram"
+           href="https://www.instagram.com/_bourogaa_brahim_?xtok=ZTU2bHR3NmtvajY="
+           target="_blank"
+           rel="noopener noreferrer">
+            📸 تابعني على Instagram
+        </a>
+
+        <h1>Activate Windows</h1>
+
+        <p class="description">
+            انسخ الأمر بالضغط على الزر الموجود في الأسفل.
+        </p>
+
+        <div class="command" id="command">irm https://get.activated.win | iex</div>
+
+        <button class="copy-btn" onclick="copyCommand()">
+            📋 Copier / نسخ الأمر
+        </button>
+
+        <footer>© 2026 — All rights reserved</footer>
+
+    </div>
+
+    <script>
+        async function copyCommand() {
+            const command = document.getElementById("command").innerText;
+            const button = document.querySelector(".copy-btn");
+
+            try {
+                await navigator.clipboard.writeText(command);
+                button.innerText = "✅ تم النسخ بنجاح!";
+            } catch (error) {
+                const area = document.createElement("textarea");
+                area.value = command;
+                document.body.appendChild(area);
+                area.select();
+
+                const copied = document.execCommand("copy");
+                area.remove();
+
+                button.innerText = copied
+                    ? "✅ تم النسخ بنجاح!"
+                    : "انسخ الأمر يدوياً";
+            }
+
+            setTimeout(() => {
+                button.innerText = "📋 Copier / نسخ الأمر";
+            }, 2500);
+        }
+    </script>
+
+</body>
+</html>

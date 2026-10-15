@@ -1,0 +1,109 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #080b12;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    text-align: center;
+    padding: 32px 24px;
+    background: #111722;
+    border: 1px solid #263247;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px #0008;
+}
+
+.instagram {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    );
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.instagram:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+h1 {
+    font-size: 27px;
+    margin-bottom: 14px;
+}
+
+.description {
+    color: #aab5c7;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.command {
+    direction: ltr;
+    background: #080b12;
+    border: 1px solid #34435b;
+    padding: 16px 10px;
+    border-radius: 12px;
+    color: #73f7b1;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+    margin-bottom: 14px;
+    user-select: all;
+}
+
+.copy-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #647cff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.copy-btn:hover {
+    background: #8294ff;
+    transform: translateY(-2px);
+}
+
+.notice {
+    margin-top: 18px;
+    font-size: 12px;
+    color: #9aa6b8;
+    line-height: 1.7;
+}
+
+footer {
+    margin-top: 28px;
+    color: #64748b;
+    font-size: 12px;
+}
